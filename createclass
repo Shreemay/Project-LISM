@@ -1,0 +1,16 @@
+class Student:
+	count = 0
+	def __init__(self, name, std):
+		self.name = name
+		self.std = std
+		Student.count +=1
+	def displayCount(self):
+		print "Total Students -  %d" % Student.count
+	def displayStudent(self):
+		print "Name - ", self.name, "\t Salary - ", self.count
+
+s1 = Student("Karan", 10)
+s2 = Student("Avinash", 8)
+s1.displayStudent()
+s2.displayStudent()
+print "Total Students -  %d" % Student.count
