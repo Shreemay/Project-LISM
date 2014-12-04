@@ -1,0 +1,11 @@
+class student:
+	scount = 0
+	def __init__(self):
+		self.__class__.scount += 1
+
+student
+print student.scount
+s=student()
+print s.scount
+s1=student()
+print s1.scount
