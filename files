@@ -1,0 +1,23 @@
+import os
+
+f = open("temp.txt","wb")
+print "Name of the file - ", f.name
+print "File status - ", f.closed
+print "Mode - ", f.mode
+f.write("Hello World")
+f.close()
+f = open("temp.txt", "r+")
+str = f.read(100)
+print str
+position = f.tell();
+print "Current position - ", position
+position = f.seek(0,0)
+str = f.read(100)
+print str
+f.seek(0,2)
+print 'Length of file - ',f.tell()
+f.close()
+os.rename("temp.txt", "temporary.txt")
+print 'Filename renamed'
+os.remove("temporary.txt")
+print 'File deleted'
