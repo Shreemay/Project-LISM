@@ -1,0 +1,10 @@
+class A:
+	def func(self, f=None):
+		if f is None:
+			print 'None'
+		else:
+			print f
+
+a=A()
+a.func()
+a.func('Hello World')
